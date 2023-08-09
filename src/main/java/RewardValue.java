@@ -10,11 +10,15 @@ public class RewardValue {
     }
 
     public double getCashValue() {
-        cash = miles * 0.0035;
+        if (miles > 0) {
+            cash = miles * 0.0035;
+        }
         return cash;
     }
     public int getMilesValue() {
-        miles = (int) (cash / 0.0035);
+        if (cash > 0) {
+            miles = (int) (cash / 0.0035);
+        }
         return miles;
     }
 
